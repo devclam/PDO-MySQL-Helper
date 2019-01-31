@@ -17,12 +17,12 @@
 ```php
 
 $db_conf = array(
-	"HOST" => "127.0.0.1",
-	"NAME" => "db_name",
-	"USER" => "db_user",
-	"PWD" => "db_passwd",
-	"PORT" => "3306",
-	"PREFIX" => "tbl_"
+    "HOST" => "127.0.0.1",
+    "NAME" => "db_name",
+    "USER" => "db_user",
+    "PWD" => "db_passwd",
+    "PORT" => "3306",
+    "PREFIX" => "tbl_"
 );
 
 $db = db_helper($db_conf);
@@ -54,8 +54,8 @@ $db->tx_on();
 $db->table("tbl_list")->update("name = :name")->where("id = :id")
     ->bind(array(
         "name" => $name,
-		"id" => $id
-	))->exec();
+        "id" => $id
+    ))->exec();
 
 // delete from list where id = $id
 $db->table("tbl_list")->delete()->where("id = :id")->bind(array("id" => $id))->exec();
